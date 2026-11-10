@@ -1,0 +1,48 @@
+{
+  "agent": {
+    "name": "Organizational Adoption Agent",
+    "specialty": "Organizational readiness for emerging technology adoption",
+    "version": "1.0.0"
+  },
+  "analytical_question": "Can this organization govern and sustain the proposed packaging RFQ drafting assistant, and what must change before the next adoption decision?",
+  "general_et_finding": "LLM-generated text can include plausible factual errors or fabricated references. NIST identifies this risk as confabulation. No evidence in the intake establishes the selected model's accuracy.",
+  "application_finding": "An evidence-linked draft could reduce bid comparison effort if buyers can trace and verify prices, terms, and omissions. A read-only historical test with manual approval and fallback bounds the exposure. Fit remains conditional on use-specific evaluation.",
+  "organization_specific_finding": "Leadership and sponsorship: Strength. The director signed the pilot charter.\nSkills and training: Strength. Two buyers rehearsed checking sources and escalating errors.\nWorkflow and process: Strength. A category manager signs the manual comparison and the team rehearsed fallback.\nInfrastructure and data: Strength for the pilot. The read-only sandbox and sanitized boundary are approved. IDs and revisions were checked for all 20 packets.\nResources and budget: Partial. Four weeks of sandbox funding and four reviewer hours per week are secured. Recurring capacity is undecided.\nCulture and change: Partial. The team rehearsed error reporting. Routine reporting behavior remains unobserved.\nGovernance and risk: Unknown for launch. The case supplies no delegated stop authority or backup incident route.\nOperating ownership: Partial. The manager coordinates logs and reviews. Decision rights and continuity are unverified.",
+  "evidence": [
+    {
+      "claim": "Confabulation is a documented generative AI risk. NIST also offers guidance on acceptable use and feedback mechanisms.",
+      "source_or_reference": "NIST AI 600-1, section 2.2 and actions GV-3.2-003 and GV-3.2-004, https://doi.org/10.6028/NIST.AI.600-1",
+      "date_or_recency": "2024-07-26",
+      "evidence_type": "Primary technical guidance (voluntary)",
+      "notes": "General risk and oversight guidance. The adoption decisions are specialist judgments from the fictional profiles."
+    },
+    {
+      "claim": "A signed charter, named coordinator, rehearsed reviewers, funded time, and checked packets are described.",
+      "source_or_reference": "cases/contrast_2.json, capabilities_constraints",
+      "date_or_recency": "2026-11-09",
+      "evidence_type": "Fictional scenario facts",
+      "notes": "Supports preparation and several pilot controls."
+    },
+    {
+      "claim": "The case summary omits who can pause the pilot and who covers an incident when the coordinator is unavailable.",
+      "source_or_reference": "cases/contrast_2.json, capabilities_constraints",
+      "date_or_recency": "2026-11-09",
+      "evidence_type": "Fictional scenario facts",
+      "notes": "Missing evidence. A coordinator title does not establish authority."
+    }
+  ],
+  "contrary_evidence_or_limitations": [
+    "A signed charter and a successful rehearsal are favorable, but the supplied summary leaves a critical governance decision unverified."
+  ],
+  "confidence_and_uncertainty": "High confidence that the record is insufficient for launch authorization. Whether authority has already been delegated is unknown.",
+  "value_opportunity_implication": "Measure buyer minutes for drafting plus verification and correction against a manual baseline. Count material omissions and corrections alongside time saved.",
+  "risk_governance_implication": "A material error or exposure requires a person authorized to stop work and an incident route that functions during absences.",
+  "recommendation_management_implication": "REQUEST EVIDENCE before pilot launch. 1. The procurement director should provide the charter clause or equivalent naming the pause decision-maker and backup incident coverage. 2. Procurement Operations should confirm the handoff with IT/security and retain the test log. Reassess for PILOT ONLY if authority and coverage are confirmed. If evidence shows they do not exist, HOLD until they are assigned.",
+  "change_monitoring_triggers": [
+    "When the sponsor produces signed delegation and incident coverage evidence, rerun the pilot decision. Escalate an unresolved gap to the sponsor.",
+    "If authorized later, assess quality and capacity at week four before deciding on rollout."
+  ],
+  "abstention_or_more_information_needed": [
+    "Who can pause the pilot, and who handles an incident when the coordinator is unavailable? Provide the signed charter clause or equivalent delegation and escalation record. Withhold pilot authorization until verified."
+  ]
+}

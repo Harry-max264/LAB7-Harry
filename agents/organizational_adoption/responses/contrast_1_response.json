@@ -1,0 +1,49 @@
+{
+  "agent": {
+    "name": "Organizational Adoption Agent",
+    "specialty": "Organizational readiness for emerging technology adoption",
+    "version": "1.0.0"
+  },
+  "analytical_question": "Can this organization govern and sustain the proposed packaging RFQ drafting assistant, and what must change before the next adoption decision?",
+  "general_et_finding": "LLM-generated text can include plausible factual errors or fabricated references. NIST identifies this risk as confabulation. No evidence in the intake establishes the selected model's accuracy.",
+  "application_finding": "An evidence-linked draft could reduce bid comparison effort if buyers can trace and verify prices, terms, and omissions. A read-only historical test with manual approval and fallback bounds the exposure. Fit remains conditional on use-specific evaluation.",
+  "organization_specific_finding": "Leadership and sponsorship: Strength. The director signed the pilot charter.\nSkills and training: Strength. Two buyers rehearsed checking sources and escalating errors.\nWorkflow and process: Strength. A category manager signs the manual comparison and the team rehearsed fallback.\nInfrastructure and data: Strength for the pilot. The read-only sandbox and sanitized boundary are approved. IDs and revisions were checked for all 20 packets.\nResources and budget: Partial. Four weeks of sandbox funding and four reviewer hours per week are secured. Recurring capacity is undecided.\nCulture and change: Partial. The team rehearsed error reporting. Routine reporting behavior remains unobserved.\nGovernance and risk: Strength for the pilot. Stop authority and escalation to IT/security are explicit.\nOperating ownership: Strength for the pilot. Procurement Operations owns the log, weekly review, and escalation.",
+  "evidence": [
+    {
+      "claim": "Confabulation is a documented generative AI risk. NIST also offers guidance on acceptable use and feedback mechanisms.",
+      "source_or_reference": "NIST AI 600-1, section 2.2 and actions GV-3.2-003 and GV-3.2-004, https://doi.org/10.6028/NIST.AI.600-1",
+      "date_or_recency": "2024-07-26",
+      "evidence_type": "Primary technical guidance (voluntary)",
+      "notes": "General risk and oversight guidance. The adoption decisions are specialist judgments from the fictional profiles."
+    },
+    {
+      "claim": "The director delegated stop authority to the procurement operations manager, and Procurement Operations owns review and IT/security escalation.",
+      "source_or_reference": "cases/contrast_1.json, capabilities_constraints",
+      "date_or_recency": "2026-11-09",
+      "evidence_type": "Fictional scenario facts",
+      "notes": "Supports bounded launch authority and an escalation path."
+    },
+    {
+      "claim": "Two buyers rehearsed review. The analyst checked 20 packet IDs and revisions. The charter funds four weeks with protected reviewer time.",
+      "source_or_reference": "cases/contrast_1.json, capabilities_constraints",
+      "date_or_recency": "2026-11-09",
+      "evidence_type": "Fictional scenario facts",
+      "notes": "Evidence of pilot capacity. Recurring staffing and budget remain open."
+    }
+  ],
+  "contrary_evidence_or_limitations": [
+    "The 20 packets represent the historical test scope. There are no observed performance or buyer workload results. Sustained reporting behavior and ongoing staffing remain unverified."
+  ],
+  "confidence_and_uncertainty": "Moderate to high confidence in readiness for the stated pilot given the scenario. Rollout confidence is low pending measured quality, value and operating capacity.",
+  "value_opportunity_implication": "Measure buyer minutes for drafting plus verification and correction against a manual baseline. Count material omissions and corrections alongside time saved.",
+  "risk_governance_implication": "Keep the historical scope, role-based access, manual approvals, and a logged escalation route. Preserve the procurement operations manager's pause authority.",
+  "recommendation_management_implication": "PILOT ONLY for four weeks using the 20 sanitized historical packets. 1. Procurement Operations should log every tested brief and exception and review workload and verification weekly. 2. The category manager should compare total buyer effort and material errors with the manual baseline and document the week-four results. 3. Before operational rollout, the procurement director and IT/security should approve recurring capacity, continued stop authority, and use-specific quality and value criteria.",
+  "change_monitoring_triggers": [
+    "At the first unverified material price or term, hold the affected brief and revert to the manual comparison. At any exposure outside the approved data boundary, the delegated owner pauses the pilot and escalates to IT/security.",
+    "At the weekly review, inspect total buyer time, material errors and omissions, unresolved escalations, and reviewer hours. If review exceeds protected capacity, narrow or pause the trial.",
+    "At week four, revisit the rollout decision against proposed criteria: no uncorrected material errors in reviewed briefs, lower total buyer time than the manual baseline, and funded recurring ownership and staffing. Set the minimum meaningful time saving before testing."
+  ],
+  "abstention_or_more_information_needed": [
+    "Who will fund and staff ongoing review and incident handling after week four? Provide an approved budget and named coverage plan before deciding on rollout."
+  ]
+}
